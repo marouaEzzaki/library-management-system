@@ -65,13 +65,45 @@ In the `persistence.xml`, configure the database connection parameters:
 
 ## Usage
 
-- The application will automatically add authors, publishers, books, and bookstores to the database.
-- You can run queries to list books, authors, bookstores, and more:
-  - List books in the system.
-  - List authors and their books.
-  - List bookstores and their books.
+This application allows you to manage books, authors, bookstores, and their relationships. You can execute several queries to interact with the database:
+
+### Automatically Added Data
+- Authors, publishers, books, and bookstores will be automatically added to the database.
+
+### Available Queries
+
+1. **List all books:**
+   - Retrieves all books from the database, displaying their titles, authors, and publishers.
+   
+2. **List all authors:**
+   - Displays authors and their associated books.
+
+3. **List all bookstores:**
+   - Retrieves all bookstores and their book collections.
+
+4. **Count books by author:**
+   - Lists the number of books for each author along with their full name.
+
+5. **Total earnings by author:**
+   - Calculates and displays the total earnings for each author based on the price of their books.
+
+6. **Books in multiple bookstores:**
+   - Lists books that are sold in more than one bookstore, displaying the bookstores selling each book.
+
+7. **Books with authors and publishers:**
+   - Displays books along with their authors and publishers.
+
+8. **Books and their bookstores:**
+   - Lists books and the bookstores that sell them.
+
+These queries will help you analyze and view the relationships between books, authors, and bookstores in the system.
+
 
 ```java
+Queries.countBooksByAuthor(em);
+Queries.listBooksInMultipleBookstores(em);
+Queries.listBooksWithAuthorsAndEditorials(em);
+Queries.totalEarningsByAuthor(em);
 Queries.listBooks(em);
 Queries.listAuthors(em);
 Queries.listBookstores(em);
