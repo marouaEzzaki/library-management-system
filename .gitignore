@@ -173,6 +173,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
 
 # End of https://www.gitignore.io/api/git,java,maven,eclipse,windows
 
